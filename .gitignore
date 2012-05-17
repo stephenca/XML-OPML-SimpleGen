@@ -8,6 +8,7 @@ _build/*
 MANIFEST.bak
 *.tar.gz
 *META.yml
+Makefile.PL
 Makefile
 cover_db/*
 *.log
