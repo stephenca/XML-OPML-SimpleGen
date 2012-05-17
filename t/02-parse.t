@@ -1,13 +1,13 @@
-use Test::More tests => 2;
-
-use File::Spec::Functions;
-use lib catdir('..', 'lib');
+#!perl -T
+use Test::More ;
 
 BEGIN {
 	use_ok( 'XML::OPML::SimpleGen' );
 }
 
-use XML::OPML;
+eval "use XML::OPML";
+plan skip_all => "XML::OPML required for parse tests" if ($@);
+plan tests => 1;
 
 my $obj = new XML::OPML::SimpleGen;
 $obj->insert_outline(text => 'test');

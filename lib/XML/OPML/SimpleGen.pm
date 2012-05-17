@@ -29,60 +29,58 @@ use strict;
 use warnings;
 
 use base 'Class::Accessor';
-use DateTime;
-use DateTime::Format::Mail;
+use POSIX qw(strftime);
 
 __PACKAGE__->mk_accessors(qw|groups xml_options outline group xml_head xml_outlines xml|);
 
-our $VERSION = '0.02';
+our $VERSION;
+use version; $VERSION = version->new(0.03);
 
 sub new {
     my $class = shift;
     my @args = @_;
 
     my $args = {
-	groups  => {},
+	    groups  => {},
 
-	xml     => {
-	    version => '1.1',
-	    @args,
-	    },			
+	    xml     => {
+	        version     => '1.1',
+	        @args,
+	        },			
 
-	# XML::Simple optionse
-	xml_options => {
-	    RootName => 'opml', 
-	    XMLDecl => '<?xml version="1.0" encoding="utf-8" ?>',
-	    AttrIndent => 1,
+	    # XML::Simple options
+	    xml_options => {
+	        RootName    => 'opml', 
+	        XMLDecl     => '<?xml version="1.0" encoding="utf-8" ?>',
+	        AttrIndent  => 1,
+	    },
 
-	},
+	    # default values for nodes
+	    outline => {
+	        type        => 'rss',
+	        version     => 'RSS',
+	        text        => '',
+	        title       => '',
+	        description => '',
+	    },
 
-	# default values for nodes
-	outline => {
-	    type => 'rss',
-	    version => 'RSS',
-	    text => '',
-	    title => '',
-	    description => '',
-	},
+	    group => {
+	        isOpen      => 'true',
+	    },
 
-	group => {
-	    isOpen => 'true',
+	    xml_head        => {},
+	    xml_outlines    => [],
 
-	},
-
-	xml_head => {},
-	xml_outlines => [],
-
-	id  => 1,
+	    id              => 1,
     };
 
     my $self = bless $args, $class;
 
     $self->head(
-		title => '',
-		dateCreated => DateTime::Format::Mail->format_datetime( DateTime->now ),
-		dateModified => DateTime::Format::Mail->format_datetime( DateTime->now ),		
-		);
+        title => '',
+        dateCreated  => strftime( "%a, %e %b %Y %H:%M:%S %z", localtime ),
+        dateModified => strftime( "%a, %e %b %Y %H:%M:%S %z", localtime ),
+    );
 
     return $self;
 }
@@ -97,9 +95,9 @@ sub head {
     my $self = shift;
     my $data = {@_};
 
-    #this is neccessary, otherwise XML::Simple will just generate attributes
-    while (my ($key,$value) = each %$data) {
-	$self->xml_head->{$key} = [ $value ];
+    #this is necessary, otherwise XML::Simple will just generate attributes
+    while (my ($key,$value) = each %{ $data }) {
+	    $self->xml_head->{$key} = [ $value ];
     }
 }
 
@@ -107,10 +105,10 @@ sub add_group {
     my $self = shift;
     my %defaults = %{$self->group};
     my $data = {
-	id => $self->id,
-	%defaults, 
-	@_ };
-    
+        id => $self->id,
+        %defaults,
+        @_ };
+ 
     die "Need to define 'text' attribute" unless defined $data->{text};
 
     $data->{outline} = [];
@@ -123,21 +121,22 @@ sub insert_outline {
     my $self = shift;
     my %defaults = %{$self->outline};
     my $data = {
-	id => $self->id,
-	%defaults, 
-	@_};
+        id => $self->id,
+        %defaults,
+        @_};
 
     my $parent = $self->xml_outlines;
 
     if (exists $data->{group}) {
-	if (exists $self->groups->{$data->{group}}) {
-	    $parent = $self->groups->{$data->{group}};
-	    delete($data->{group});
-	} else {
-	    $self->add_group('text' => $data->{group});
-	    $self->insert_outline(%$data);
-	    return;
-	}
+	    if (exists $self->groups->{$data->{group}}) {
+	        $parent = $self->groups->{$data->{group}};
+	        delete($data->{group});
+	    }
+        else {
+	        $self->add_group('text' => $data->{group});
+	        $self->insert_outline(%$data);
+	        return;
+	    }
     }
 
     push @{$parent}, $data;
@@ -160,12 +159,10 @@ sub as_string {
 sub _mk_hashref {
     my $self = shift;
 
-
-
     my $hashref =  {
-	%{$self->xml},
-	head => $self->xml_head,
-	body => { outline => $self->xml_outlines },
+	    %{$self->xml},
+	    head => $self->xml_head,
+	    body => { outline => $self->xml_outlines },
     };
 
     return $hashref;
@@ -220,9 +217,11 @@ XML::OPML::SimpleGen - create OPML using XML::Simple
 
 =head1 DESCRIPTION
 
-XML::OPML::SimpleGen let's you simply genereate OPML formated XML documents
-without having to much to worry about. It is a drop in replacement for XML::OPML
-in regards of generation. As this module uses XML::Simple it is rather
+XML::OPML::SimpleGen lets you simply generate OPML documents
+without having too much to worry about. 
+It is a drop-in replacement for XML::OPML
+in regards of generation. 
+As this module uses XML::Simple it is rather
 generous in regards of attribute or element names.
 
 =head1 COMMON METHODS
@@ -238,6 +237,10 @@ want to use here is the version => '1.1', which is default anyway.
 =item head( key => value ) 
 
 XML::OPML compatible head method to change header values. 
+
+=item id ( )
+
+Returns (and increments) a counter.
 
 =item add_group ( text => 'name' )
 
@@ -275,7 +278,7 @@ $hashref may contain any XML::Simple options.
 =item outline ( $hashref )
 
 The outline method defines the 'template' for any new outline
-element. You can preset key value pairs here in order to be used
+element. You can preset key value pairs here to be used
 in all outline elements that will be generated by XML::OPML::SimpleGen.
 
 =item group ( $hashref )
@@ -303,13 +306,13 @@ L<XML::OPML> L<XML::Simple>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2005 Marcus Thiesen, All Rights Reserved.
+Copyright 2005-2007 Marcus Thiesen, All Rights Reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
 =head1 CVS
 
-$Id: FromAtom.pm,v 1.1 2005/03/18 17:04:44 marcus Exp $
+$Id: SimpleGen.pm,v 1.8 2008/02/07 14:20:27 stephenca Exp $
 
 =cut

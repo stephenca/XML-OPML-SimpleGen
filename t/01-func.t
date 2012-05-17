@@ -1,7 +1,5 @@
+#!perl -T
 use Test::More tests => 2;
-
-use File::Spec::Functions;
-use lib catdir('..', 'lib');
 
 BEGIN {
 	use_ok( 'XML::OPML::SimpleGen' );

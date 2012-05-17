@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 use ExtUtils::MakeMaker;
+require 5.006;
 
 WriteMakefile(
     NAME                => 'XML::OPML::SimpleGen',
@@ -9,13 +10,10 @@ WriteMakefile(
     ABSTRACT_FROM       => 'lib/XML/OPML/SimpleGen.pm',
     PL_FILES            => {},
     PREREQ_PM => {
-        'Test::More' => 0,
-	'DateTime'   => 0,
-	'DateTime::Format::Mail' => 0,
-	'XML::Simple' => 0,
-	'XML::OPML' => 0,
+        'version'      => 0,
+        'Test::More'   => 0,
+        'XML::Simple'  => 0,
         'Class::Accessor' => 0,
-
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'XML-OPML-SimpleGen-*' },

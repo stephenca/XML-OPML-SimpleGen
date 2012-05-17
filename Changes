@@ -1,5 +1,12 @@
 Revision history for XML-OPML-SimpleGen
 
+0.03 2008-02-03 23:25 UTC
+    - make 5.6.0 oldest supported Perl version.
+    - use version pragma.
+    - eliminate dependencies on Date* modules.
+    - revise tests to add taint mode, pod coverage and remove un-needed
+      includes.
+
 0.02    2005-03-23 17:55 UTC
 	- dogh.. had atom still in my head
 	. added a test for passing XML::OPMLs parser
