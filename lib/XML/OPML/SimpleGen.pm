@@ -33,8 +33,8 @@ use POSIX qw(strftime);
 
 __PACKAGE__->mk_accessors(qw|groups xml_options outline group xml_head xml_outlines xml|);
 
-our $VERSION;
-use version; $VERSION = version->new(0.04);
+# Version set by dist.ini; do not change here.
+# VERSION
 
 sub new {
     my $class = shift;
@@ -180,6 +180,8 @@ sub save {
 
 1;
 
+# ABSTRACT:  create OPML using XML::Simple
+
 =pod
 
 =head1 NAME
@@ -292,6 +294,10 @@ grouping outline element.
 
 Marcus Thiesen, C<< <marcus@thiesen.org> >>
 
+=head1 MAINTAINER 
+
+Stephen Cardie C<< stephenca@cpan.org >>
+
 =head1 BUGS
 
 Please report any bugs or feature requests to
@@ -306,13 +312,9 @@ L<XML::OPML> L<XML::Simple>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2005-2007 Marcus Thiesen, All Rights Reserved.
+Copyright 2005-2012 Marcus Thiesen, All Rights Reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
-
-=head1 CVS
-
-$Id: SimpleGen.pm,v 1.9 2008/02/08 10:33:43 stephenca Exp $
 
 =cut
