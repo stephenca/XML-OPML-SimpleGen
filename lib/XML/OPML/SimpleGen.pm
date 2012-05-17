@@ -34,7 +34,7 @@ use POSIX qw(strftime);
 __PACKAGE__->mk_accessors(qw|groups xml_options outline group xml_head xml_outlines xml|);
 
 our $VERSION;
-use version; $VERSION = version->new(0.03);
+use version; $VERSION = version->new(0.04);
 
 sub new {
     my $class = shift;
@@ -313,6 +313,6 @@ under the same terms as Perl itself.
 
 =head1 CVS
 
-$Id: SimpleGen.pm,v 1.8 2008/02/07 14:20:27 stephenca Exp $
+$Id: SimpleGen.pm,v 1.9 2008/02/08 10:33:43 stephenca Exp $
 
 =cut

@@ -1,4 +1,6 @@
 Revision history for XML-OPML-SimpleGen
+0.04 2008-02-08 10:27:00 UTC
+    - fix improper plan() declaration in t/02-parse.t
 
 0.03 2008-02-03 23:25 UTC
     - make 5.6.0 oldest supported Perl version.

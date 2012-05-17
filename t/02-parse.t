@@ -1,15 +1,13 @@
 #!perl -T
 use Test::More ;
 
-BEGIN {
-	use_ok( 'XML::OPML::SimpleGen' );
-}
-
 eval "use XML::OPML";
 plan skip_all => "XML::OPML required for parse tests" if ($@);
-plan tests => 1;
+plan tests => 2;
 
-my $obj = new XML::OPML::SimpleGen;
+require_ok( 'XML::OPML::SimpleGen' );
+
+my $obj = XML::OPML::SimpleGen->new();
 $obj->insert_outline(text => 'test');
 my $data = $obj->as_string;
 
@@ -21,4 +19,4 @@ $opml->parse($data);
 
 isa_ok($opml, 'XML::OPML');
 
-
+exit;

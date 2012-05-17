@@ -21,4 +21,4 @@ can_ok( 'XML::OPML::SimpleGen',
         as_string
         save ) );
 
-diag( "Testing XML::OPML::SimpleGen $XML::OPML::SimpleGen::VERSION, Perl 5.008004, /usr/bin/perl" );
+diag( "Testing XML::OPML::SimpleGen $XML::OPML::SimpleGen::VERSION, Perl $], $^X" );
