@@ -32,9 +32,9 @@ use base 'Class::Accessor';
 use DateTime;
 use DateTime::Format::Mail;
 
-__PACKAGE__->mk_accessors(qw|xml groups xml_options outline group|);
+__PACKAGE__->mk_accessors(qw|groups xml_options outline group xml_head xml_outlines xml|);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub new {
     my $class = shift;
@@ -46,12 +46,11 @@ sub new {
 	xml     => {
 	    version => '1.1',
 	    @args,
-	    outline => [],
 	    },			
 
 	# XML::Simple optionse
 	xml_options => {
-	    RootName => 'atom', 
+	    RootName => 'opml', 
 	    XMLDecl => '<?xml version="1.0" encoding="utf-8" ?>',
 	    AttrIndent => 1,
 
@@ -71,12 +70,13 @@ sub new {
 
 	},
 
+	xml_head => {},
+	xml_outlines => [],
+
 	id  => 1,
     };
 
     my $self = bless $args, $class;
-
-    $self->xml->{head} = {};
 
     $self->head(
 		title => '',
@@ -99,7 +99,7 @@ sub head {
 
     #this is neccessary, otherwise XML::Simple will just generate attributes
     while (my ($key,$value) = each %$data) {
-	$self->xml->{head}->{$key} = [ $value ];
+	$self->xml_head->{$key} = [ $value ];
     }
 }
 
@@ -115,7 +115,7 @@ sub add_group {
 
     $data->{outline} = [];
 
-    push @{$self->xml->{outline}}, $data;
+    push @{$self->xml_outlines}, $data;
     $self->groups->{$data->{text}} = $data->{outline};
 }
 
@@ -127,7 +127,7 @@ sub insert_outline {
 	%defaults, 
 	@_};
 
-    my $parent = $self->xml->{outline};
+    my $parent = $self->xml_outlines;
 
     if (exists $data->{group}) {
 	if (exists $self->groups->{$data->{group}}) {
@@ -143,7 +143,10 @@ sub insert_outline {
     push @{$parent}, $data;
 }
 
-*__PACKAGE__::add_outline = \&insert_outline;
+sub add_outline {
+    my $self = shift;
+    $self->insert_outline(@_);
+}
 
 sub as_string {
     my $self = shift;
@@ -151,7 +154,21 @@ sub as_string {
     require XML::Simple;
     my $xs = new XML::Simple();
 
-    return $xs->XMLout( $self->xml, %{$self->xml_options} );
+    return $xs->XMLout( $self->_mk_hashref, %{$self->xml_options} );
+}
+
+sub _mk_hashref {
+    my $self = shift;
+
+
+
+    my $hashref =  {
+	%{$self->xml},
+	head => $self->xml_head,
+	body => { outline => $self->xml_outlines },
+    };
+
+    return $hashref;
 }
 
 sub save {
@@ -161,7 +178,7 @@ sub save {
     require XML::Simple;
     my $xs = new XML::Simple();
 
-    $xs->XMLout( $self->xml, %{$self->xml_options}, OutputFile => $filename );
+    $xs->XMLout( $self->_mk_hashref, %{$self->xml_options}, OutputFile => $filename );
 }
 
 1;

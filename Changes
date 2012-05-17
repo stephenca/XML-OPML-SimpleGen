@@ -1,5 +1,9 @@
 Revision history for XML-OPML-SimpleGen
 
+0.02    2005-03-23 17:55 UTC
+	- dogh.. had atom still in my head
+	. added a test for passing XML::OPMLs parser
+
 0.01    Date/time
         First version, released on an unsuspecting world.
 

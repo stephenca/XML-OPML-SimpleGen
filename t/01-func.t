@@ -1,5 +1,8 @@
 use Test::More tests => 2;
 
+use File::Spec::Functions;
+use lib catdir('..', 'lib');
+
 BEGIN {
 	use_ok( 'XML::OPML::SimpleGen' );
 }
@@ -18,10 +21,12 @@ ok($old eq $data, "Basic function");
 
 __DATA__
 <?xml version="1.0" encoding="utf-8" ?>
-<atom version="1.1">
+<opml version="1.1">
+  <body>
+  </body>
   <head>
     <dateCreated></dateCreated>
     <dateModified></dateModified>
     <title></title>
   </head>
-</atom>
+</opml>

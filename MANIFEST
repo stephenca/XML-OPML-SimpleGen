@@ -6,4 +6,5 @@ README
 lib/XML/OPML/SimpleGen.pm
 t/00-load.t
 t/01-func.t
+t/02-parse.t
 t/pod.t

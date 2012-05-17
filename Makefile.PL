@@ -13,6 +13,8 @@ WriteMakefile(
 	'DateTime'   => 0,
 	'DateTime::Format::Mail' => 0,
 	'XML::Simple' => 0,
+	'XML::OPML' => 0,
+        'Class::Accessor' => 0,
 
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
