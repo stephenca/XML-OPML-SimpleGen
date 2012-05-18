@@ -1,4 +1,7 @@
 Revision history for XML-OPML-SimpleGen
+0.05    Fri May 18 16:04:55 2012 +0100
+    - Release v0.05 - includes bugfix for RT51000
+
 0.040_004  Fri May 18 15:26:16 2012 +0100
     - Bug fix - merge KAPPA's fix for RT51000. (Stephen Cardie)
 
