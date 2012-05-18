@@ -269,10 +269,6 @@ grouping outline element.
 
 =back
 
-=head1 AUTHOR
-
-Marcus Thiesen, C<< <marcus@thiesen.org> >>
-
 =head1 MAINTAINER 
 
 Stephen Cardie C<< <stephenca@cpan.org> >>
