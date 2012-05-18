@@ -4,12 +4,12 @@ use strict;
 use warnings;
 
 use base 'Class::Accessor';
-use POSIX qw(strftime);
+use POSIX qw(strftime setlocale LC_TIME LC_CTYPE);
 
 __PACKAGE__->mk_accessors(qw|groups xml_options outline group xml_head xml_outlines xml|);
 
 # Version set by dist.ini; do not change here.
-our $VERSION = '0.040_003'; # VERSION
+our $VERSION = '0.040_004'; # VERSION
 
 sub new {
     my $class = shift;
@@ -51,11 +51,15 @@ sub new {
 
     my $self = bless $args, $class;
 
+    # Force locale to 'C' rather than local, then reset after setting times.
+    # Fixes RT51000.  Thanks to KAPPA for the patch.
+    my $old_loc = POSIX::setlocale(LC_TIME, "C");
     $self->head(
         title => '',
         dateCreated  => strftime( "%a, %e %b %Y %H:%M:%S %z", localtime ),
         dateModified => strftime( "%a, %e %b %Y %H:%M:%S %z", localtime ),
     );
+    POSIX::setlocale(LC_TIME,$old_loc);
 
     return $self;
 }
@@ -167,7 +171,7 @@ XML::OPML::SimpleGen - create OPML using XML::Simple
 
 =head1 VERSION
 
-version 0.040_003
+version 0.040_004
 
 =head1 SYNOPSIS
 
@@ -281,6 +285,11 @@ Marcus Thiesen, C<< <marcus@thiesen.org> >>
 =head1 MAINTAINER 
 
 Stephen Cardie C<< <stephenca@cpan.org> >>
+
+=head1 CONTRIBUTORS
+
+KAPPA C<< <kappa@cpan.org> >> contributed a patch to close RT51000
+L<https://rt.cpan.org/Public/Bug/Display.html?id=51000>
 
 =head1 BUGS
 

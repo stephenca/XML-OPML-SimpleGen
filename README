@@ -2,7 +2,7 @@ NAME
     XML::OPML::SimpleGen - create OPML using XML::Simple
 
 VERSION
-    version 0.040_003
+    version 0.040_004
 
 SYNOPSIS
         require XML::OPML::SimpleGen;
@@ -88,6 +88,10 @@ AUTHOR
 
 MAINTAINER
     Stephen Cardie "<stephenca@cpan.org>"
+
+CONTRIBUTORS
+    KAPPA "<kappa@cpan.org>" contributed a patch to close RT51000
+    <https://rt.cpan.org/Public/Bug/Display.html?id=51000>
 
 BUGS
     Please report any bugs or feature requests to
