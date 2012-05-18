@@ -1,4 +1,8 @@
 Revision history for XML-OPML-SimpleGen
+0.040_003  Fri May 18 14:54:13 2012 +0100
+    - Developer release - add perlcritic tests to release stage (Stephen
+Cardie)
+
 0.040_002  Fri May 18 14:47:59 2012 +0100
     - Developer release  - fix indirect object syntax; was causing perlcritic
 failures (Stephen Cardie)

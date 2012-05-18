@@ -20,7 +20,7 @@
 #     LICENSE => q[perl]
 #     NAME => q[XML::OPML::SimpleGen]
 #     PREREQ_PM => { base=>q[0], warnings=>q[0], Class::Accessor=>q[0], XML::Simple=>q[0], strict=>q[0], Test::More=>q[0], POSIX=>q[0], File::Find=>q[0], File::Temp=>q[0] }
-#     VERSION => q[0.040_002]
+#     VERSION => q[0.040_003]
 #     test => { TESTS=>q[t/*.t] }
 
 # --- MakeMaker post_initialize section:
@@ -60,11 +60,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = XML::OPML::SimpleGen
 NAME_SYM = XML_OPML_SimpleGen
-VERSION = 0.040_002
+VERSION = 0.040_003
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_040_002
+VERSION_SYM = 0_040_003
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.040_002
+XS_VERSION = 0.040_003
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -258,7 +258,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = XML-OPML-SimpleGen
-DISTVNAME = XML-OPML-SimpleGen-0.040_002
+DISTVNAME = XML-OPML-SimpleGen-0.040_003
 
 
 # --- MakeMaker macro section:
@@ -479,7 +479,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) Generating META.yml
 	$(NOECHO) $(ECHO) '--- #YAML:1.0' > META_new.yml
 	$(NOECHO) $(ECHO) 'name:               XML-OPML-SimpleGen' >> META_new.yml
-	$(NOECHO) $(ECHO) 'version:            0.040_002' >> META_new.yml
+	$(NOECHO) $(ECHO) 'version:            0.040_003' >> META_new.yml
 	$(NOECHO) $(ECHO) 'abstract:           create OPML using XML::Simple' >> META_new.yml
 	$(NOECHO) $(ECHO) 'author:' >> META_new.yml
 	$(NOECHO) $(ECHO) '    - Marcus Theisen <marcus@thiesen.org>' >> META_new.yml
@@ -796,7 +796,7 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.040_002">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.040_003">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>create OPML using XML::Simple</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>Marcus Theisen &lt;marcus@thiesen.org&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd

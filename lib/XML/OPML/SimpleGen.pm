@@ -9,7 +9,7 @@ use POSIX qw(strftime);
 __PACKAGE__->mk_accessors(qw|groups xml_options outline group xml_head xml_outlines xml|);
 
 # Version set by dist.ini; do not change here.
-our $VERSION = '0.040_002'; # VERSION
+our $VERSION = '0.040_003'; # VERSION
 
 sub new {
     my $class = shift;
@@ -167,7 +167,7 @@ XML::OPML::SimpleGen - create OPML using XML::Simple
 
 =head1 VERSION
 
-version 0.040_002
+version 0.040_003
 
 =head1 SYNOPSIS
 
