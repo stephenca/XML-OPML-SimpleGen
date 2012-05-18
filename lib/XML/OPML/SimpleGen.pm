@@ -125,8 +125,8 @@ sub add_outline {
 sub as_string {
     my $self = shift;
 
-    require XML::Simple;
-    my $xs = new XML::Simple();
+    require  XML::Simple;
+    my $xs = XML::Simple->new();
 
     return $xs->XMLout( $self->_mk_hashref, %{$self->xml_options} );
 }
@@ -147,8 +147,8 @@ sub save {
     my $self = shift;
     my $filename = shift;
 
-    require XML::Simple;
-    my $xs = new XML::Simple();
+    require  XML::Simple;
+    my $xs = XML::Simple->new();
 
     $xs->XMLout( $self->_mk_hashref, %{$self->xml_options}, OutputFile => $filename );
 }
