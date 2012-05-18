@@ -112,6 +112,11 @@ Marcus Thiesen, `<marcus@thiesen.org>`
 
 Stephen Cardie `<stephenca@cpan.org>`
 
+# CONTRIBUTORS
+
+KAPPA `<kappa@cpan.org>` contributed a patch to close RT51000
+[https://rt.cpan.org/Public/Bug/Display.html?id=51000](https://rt.cpan.org/Public/Bug/Display.html?id=51000)
+
 # BUGS
 
 Please report any bugs or feature requests to
