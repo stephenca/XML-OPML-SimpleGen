@@ -4,7 +4,7 @@ XML::OPML::SimpleGen - create OPML using XML::Simple
 
 # VERSION
 
-version 0.040\_003
+version 0.040\_004
 
 # SYNOPSIS
 
@@ -111,6 +111,11 @@ Marcus Thiesen, `<marcus@thiesen.org>`
 # MAINTAINER 
 
 Stephen Cardie `<stephenca@cpan.org>`
+
+# CONTRIBUTORS
+
+KAPPA `<kappa@cpan.org>` contributed a patch to close RT51000
+[https://rt.cpan.org/Public/Bug/Display.html?id=51000](https://rt.cpan.org/Public/Bug/Display.html?id=51000)
 
 # BUGS
 
