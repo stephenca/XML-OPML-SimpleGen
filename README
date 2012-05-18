@@ -2,7 +2,7 @@ NAME
     XML::OPML::SimpleGen - create OPML using XML::Simple
 
 VERSION
-    version 0.040_001
+    version 0.040_002
 
 SYNOPSIS
         require XML::OPML::SimpleGen;
