@@ -1,4 +1,7 @@
 Revision history for XML-OPML-SimpleGen
+0.040_001  Fri May 18 14:34:40 2012 +0100
+    - Developer release - move to Dist::Zilla for managing infrastructure.
+
 0.04 2008-02-08 10:27:00 UTC
     - fix improper plan() declaration in t/02-parse.t
 
