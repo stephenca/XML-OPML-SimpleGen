@@ -110,7 +110,7 @@ Marcus Thiesen, `<marcus@thiesen.org>`
 
 # MAINTAINER 
 
-Stephen Cardie `stephenca@cpan.org`
+Stephen Cardie `<stephenca@cpan.org>`
 
 # BUGS
 
@@ -124,20 +124,13 @@ your bug as I make changes.
 
 [XML::OPML](http://search.cpan.org/perldoc?XML::OPML) [XML::Simple](http://search.cpan.org/perldoc?XML::Simple)
 
-# COPYRIGHT & LICENSE
-
-Copyright 2005-2012 Marcus Thiesen, All Rights Reserved.
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
-
 # AUTHOR
 
-Stephen Cardie <stephenca@ls26.net>
+Marcus Theisen <marcus@thiesen.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2005 by Marcus Thiesen.
+This software is copyright (c) 2012 by Marcus Thiesen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
