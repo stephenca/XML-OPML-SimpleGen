@@ -283,6 +283,11 @@ KAPPA C<< <kappa@cpan.org> >> contributed a patch to close RT51000
 L<https://rt.cpan.org/Public/Bug/Display.html?id=51000>
 
 
+=head1 REPO
+
+  The git repository for this module is at
+L<https://github.com/stephenca/XML-OPML-SimpleGen>
+
 =head1 BUGS
 
 Please report any bugs or feature requests to
