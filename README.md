@@ -4,7 +4,7 @@ XML::OPML::SimpleGen - create OPML using XML::Simple
 
 # VERSION
 
-version 0.040\_001
+version 0.040\_003
 
 # SYNOPSIS
 

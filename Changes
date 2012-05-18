@@ -1,9 +1,18 @@
 Revision history for XML-OPML-SimpleGen
+0.040_003  Fri May 18 14:54:13 2012 +0100
+    - Developer release - add perlcritic tests to release stage (Stephen
+Cardie)
+
+0.040_002  Fri May 18 14:47:59 2012 +0100
+    - Developer release  - fix indirect object syntax; was causing perlcritic
+failures (Stephen Cardie)
+
 0.040_001  Fri May 18 14:34:40 2012 +0100
     - Developer release - move to Dist::Zilla for managing infrastructure.
+(Stephen Cardie)
 
 0.04 2008-02-08 10:27:00 UTC
-    - fix improper plan() declaration in t/02-parse.t
+    - fix improper plan() declaration in t/02-parse.t. (Stephen Cardie)
 
 0.03 2008-02-03 23:25 UTC
     - make 5.6.0 oldest supported Perl version.
