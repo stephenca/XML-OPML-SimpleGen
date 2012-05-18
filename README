@@ -1,6 +1,9 @@
 NAME
     XML::OPML::SimpleGen - create OPML using XML::Simple
 
+VERSION
+    version 0.040_001
+
 SYNOPSIS
         require XML::OPML::SimpleGen;
 
@@ -33,6 +36,9 @@ DESCRIPTION
     having too much to worry about. It is a drop-in replacement for
     XML::OPML in regards of generation. As this module uses XML::Simple it
     is rather generous in regards of attribute or element names.
+
+NAME
+    XML::OPML::SimpleGen - create OPML using XML::Simple
 
 COMMON METHODS
     new( key => value )
@@ -80,6 +86,9 @@ ADVANCED METHODS
 AUTHOR
     Marcus Thiesen, "<marcus@thiesen.org>"
 
+MAINTAINER
+    Stephen Cardie "<stephenca@cpan.org>"
+
 BUGS
     Please report any bugs or feature requests to
     "bug-xml-opml-simlegen@rt.cpan.org", or through the web interface at
@@ -90,12 +99,12 @@ BUGS
 SEE ALSO
     XML::OPML XML::Simple
 
-COPYRIGHT & LICENSE
-    Copyright 2005-2007 Marcus Thiesen, All Rights Reserved.
+AUTHOR
+    Marcus Theisen <marcus@thiesen.org>
 
-    This program is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself.
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2012 by Marcus Thiesen.
 
-CVS
-    $Id: README,v 1.4 2008/02/08 10:34:04 stephenca Exp $
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 
