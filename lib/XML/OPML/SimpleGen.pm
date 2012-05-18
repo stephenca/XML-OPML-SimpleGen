@@ -1,28 +1,3 @@
-########################################################################
-#  
-#    XML::OPML::SimpleGen
-#
-#    Copyright 2005, Marcus Thiesen (marcus@thiesen.org)  All rights reserved.
-#
-#    This program is free software; you can redistribute it and/or modify
-#    it under the terms of either:
-#
-#    a) the GNU General Public License as published by the Free Software
-#    Foundation; either version 1, or (at your option) any later
-#       version, or
-#
-#    b) the "Artistic License" which comes with Perl.
-#
-#    On Debian GNU/Linux systems, the complete text of the GNU General
-#    Public License can be found in `/usr/share/common-licenses/GPL' and
-#    the Artistic Licence in `/usr/share/common-licenses/Artistic'.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
-#
-########################################################################
-
 package XML::OPML::SimpleGen;
 
 use strict;
@@ -296,7 +271,7 @@ Marcus Thiesen, C<< <marcus@thiesen.org> >>
 
 =head1 MAINTAINER 
 
-Stephen Cardie C<< stephenca@cpan.org >>
+Stephen Cardie C<< <stephenca@cpan.org> >>
 
 =head1 BUGS
 
@@ -309,12 +284,5 @@ your bug as I make changes.
 =head1 SEE ALSO
 
 L<XML::OPML> L<XML::Simple>
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2005-2012 Marcus Thiesen, All Rights Reserved.
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
 
 =cut
