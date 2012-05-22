@@ -9,7 +9,7 @@ use POSIX qw(strftime setlocale LC_TIME LC_CTYPE);
 __PACKAGE__->mk_accessors(qw|groups xml_options outline group xml_head xml_outlines xml|);
 
 # Version set by dist.ini; do not change here.
-our $VERSION = '0.040_004'; # VERSION
+our $VERSION = '0.05'; # VERSION
 
 sub new {
     my $class = shift;
@@ -171,7 +171,7 @@ XML::OPML::SimpleGen - create OPML using XML::Simple
 
 =head1 VERSION
 
-version 0.040_004
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -278,18 +278,23 @@ grouping outline element.
 
 =back
 
-=head1 AUTHOR
-
-Marcus Thiesen, C<< <marcus@thiesen.org> >>
-
 =head1 MAINTAINER 
 
 Stephen Cardie C<< <stephenca@cpan.org> >>
+
+=head1 REPOSITORY
+
+L<https://github.com/stephenca/XML-OPML-SimpleGen>
 
 =head1 CONTRIBUTORS
 
 KAPPA C<< <kappa@cpan.org> >> contributed a patch to close RT51000
 L<https://rt.cpan.org/Public/Bug/Display.html?id=51000>
+
+=head1 REPO
+
+  The git repository for this module is at
+L<https://github.com/stephenca/XML-OPML-SimpleGen>
 
 =head1 BUGS
 

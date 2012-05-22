@@ -2,7 +2,7 @@ NAME
     XML::OPML::SimpleGen - create OPML using XML::Simple
 
 VERSION
-    version 0.040_004
+    version 0.05
 
 SYNOPSIS
         require XML::OPML::SimpleGen;
@@ -83,15 +83,19 @@ ADVANCED METHODS
         This method is similar to outline, it defines the template for a
         grouping outline element.
 
-AUTHOR
-    Marcus Thiesen, "<marcus@thiesen.org>"
-
 MAINTAINER
     Stephen Cardie "<stephenca@cpan.org>"
+
+REPOSITORY
+    <https://github.com/stephenca/XML-OPML-SimpleGen>
 
 CONTRIBUTORS
     KAPPA "<kappa@cpan.org>" contributed a patch to close RT51000
     <https://rt.cpan.org/Public/Bug/Display.html?id=51000>
+
+REPO
+      The git repository for this module is at
+    L<https://github.com/stephenca/XML-OPML-SimpleGen>
 
 BUGS
     Please report any bugs or feature requests to
