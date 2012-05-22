@@ -273,6 +273,10 @@ grouping outline element.
 
 Stephen Cardie C<< <stephenca@cpan.org> >>
 
+=head1 REPOSITORY
+
+L<https://github.com/stephenca/XML-OPML-SimpleGen>
+
 =head1 CONTRIBUTORS
 
 KAPPA C<< <kappa@cpan.org> >> contributed a patch to close RT51000
