@@ -114,8 +114,10 @@ Stephen Cardie `<stephenca@cpan.org>`
 
 # CONTRIBUTORS
 
-KAPPA `<kappa@cpan.org>` contributed a patch to close RT51000
+- KAPPA `<kappa@cpan.org>` contributed a patch to close RT51000
 [https://rt.cpan.org/Public/Bug/Display.html?id=51000](https://rt.cpan.org/Public/Bug/Display.html?id=51000)
+- gregoa@debian.org contributed a patch to close RT77725
+[https://rt.cpan.org/Public/Bug/Display.html?id=77725](https://rt.cpan.org/Public/Bug/Display.html?id=77725)
 
 # REPO
 
