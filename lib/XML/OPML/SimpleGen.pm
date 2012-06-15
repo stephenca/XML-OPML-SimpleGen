@@ -288,9 +288,15 @@ L<https://github.com/stephenca/XML-OPML-SimpleGen>
 
 =head1 CONTRIBUTORS
 
-KAPPA C<< <kappa@cpan.org> >> contributed a patch to close RT51000
+=over 4
+
+=item KAPPA C<< <kappa@cpan.org> >> contributed a patch to close RT51000
 L<https://rt.cpan.org/Public/Bug/Display.html?id=51000>
 
+=item gregoa@debian.org contributed a patch to close RT77725
+L<https://rt.cpan.org/Public/Bug/Display.html?id=77725>
+
+=back
 
 =head1 REPO
 
