@@ -2,7 +2,7 @@ NAME
     XML::OPML::SimpleGen - create OPML using XML::Simple
 
 VERSION
-    version 0.05
+    version 0.06
 
 SYNOPSIS
         require XML::OPML::SimpleGen;
@@ -92,6 +92,8 @@ REPOSITORY
 CONTRIBUTORS
     KAPPA "<kappa@cpan.org>" contributed a patch to close RT51000
     <https://rt.cpan.org/Public/Bug/Display.html?id=51000>
+    gregoa@debian.org contributed a patch to close RT77725
+    <https://rt.cpan.org/Public/Bug/Display.html?id=77725>
 
 REPO
       The git repository for this module is at
