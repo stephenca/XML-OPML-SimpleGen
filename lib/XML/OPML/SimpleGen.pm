@@ -54,14 +54,23 @@ sub new {
     # Force locale to 'C' rather than local, then reset after setting times.
     # Fixes RT51000.  Thanks to KAPPA for the patch.
     my $old_loc = POSIX::setlocale(LC_TIME, "C");
+    my $ts_ar = [ localtime() ];
     $self->head(
         title => '',
-        dateCreated  => strftime( "%a, %e %b %Y %H:%M:%S %z", localtime ),
-        dateModified => strftime( "%a, %e %b %Y %H:%M:%S %z", localtime ),
+        $self->_date( dateCreated  => $ts_ar ),
+        $self->_date( dateModified => $ts_ar ),
     );
     POSIX::setlocale(LC_TIME,$old_loc);
 
     return $self;
+}
+
+sub _date {
+  my $self  = shift;
+  my $type  = shift; # dateCreated or dateModified.
+  my $ts_ar = shift; # e.g [ localtime() ]
+
+  return ( $type => strftime( "%a, %e %b %Y %H:%M:%S %z", @{$ts_ar} ) ); 
 }
 
 sub id {
@@ -279,9 +288,15 @@ L<https://github.com/stephenca/XML-OPML-SimpleGen>
 
 =head1 CONTRIBUTORS
 
-KAPPA C<< <kappa@cpan.org> >> contributed a patch to close RT51000
+=over 4
+
+=item KAPPA C<< <kappa@cpan.org> >> contributed a patch to close RT51000
 L<https://rt.cpan.org/Public/Bug/Display.html?id=51000>
 
+=item gregoa@debian.org contributed a patch to close RT77725
+L<https://rt.cpan.org/Public/Bug/Display.html?id=77725>
+
+=back
 
 =head1 REPO
 
