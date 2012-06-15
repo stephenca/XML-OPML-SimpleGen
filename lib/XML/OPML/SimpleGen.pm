@@ -54,14 +54,23 @@ sub new {
     # Force locale to 'C' rather than local, then reset after setting times.
     # Fixes RT51000.  Thanks to KAPPA for the patch.
     my $old_loc = POSIX::setlocale(LC_TIME, "C");
+    my $ts_ar = [ localtime() ];
     $self->head(
         title => '',
-        dateCreated  => strftime( "%a, %e %b %Y %H:%M:%S %z", localtime ),
-        dateModified => strftime( "%a, %e %b %Y %H:%M:%S %z", localtime ),
+        $self->_date( dateCreated  => $ts_ar ),
+        $self->_date( dateModified => $ts_ar ),
     );
     POSIX::setlocale(LC_TIME,$old_loc);
 
     return $self;
+}
+
+sub _date {
+  my $self  = shift;
+  my $type  = shift; # dateCreated or dateModified.
+  my $ts_ar = shift; # e.g [ localtime() ]
+
+  return ( $type => strftime( "%a, %e %b %Y %H:%M:%S %z", @{$ts_ar} ) ); 
 }
 
 sub id {
