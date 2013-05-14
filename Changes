@@ -1,4 +1,8 @@
 Revision history for XML-OPML-SimpleGen
+0.06_01  Tue May 14 22:59:08 2013 +0100
+   - Use DateTime instead of POSIX::strfrime() - avoids problems on win32 and
+     other platforms which implement strftime differently. (Stephen Cardie)
+
 0.06 
    - Release v0.06. (Stephen Cardie)
    - Fix RT77725 - 03-localefix.t incorrectly fails on first 9 days of month.

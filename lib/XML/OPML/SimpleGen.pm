@@ -4,7 +4,10 @@ use strict;
 use warnings;
 
 use base 'Class::Accessor';
-use POSIX qw(strftime setlocale LC_TIME LC_CTYPE);
+
+use DateTime;
+
+use POSIX qw(setlocale LC_TIME LC_CTYPE);
 
 __PACKAGE__->mk_accessors(qw|groups xml_options outline group xml_head xml_outlines xml|);
 
@@ -70,7 +73,13 @@ sub _date {
   my $type  = shift; # dateCreated or dateModified.
   my $ts_ar = shift; # e.g [ localtime() ]
 
-  return ( $type => strftime( "%a, %e %b %Y %H:%M:%S %z", @{$ts_ar} ) ); 
+  my %arg;
+  @arg{qw(second minute hour day month year)} = (
+      @{$ts_ar}[0..3],
+      $ts_ar->[4]+1,
+      $ts_ar->[5]+1900 );
+  my $dt = DateTime->new( %arg );
+  return ( $type => $dt->strftime('%a, %e %b %Y %H:%M:%S %z') );
 }
 
 sub id {
