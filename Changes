@@ -1,4 +1,7 @@
 Revision history for XML-OPML-SimpleGen
+0.07
+   - Full release of strtime() changes. (Stephen Cardie)
+
 0.06_01  Tue May 14 22:59:08 2013 +0100
    - Use DateTime instead of POSIX::strfrime() - avoids problems on win32 and
      other platforms which implement strftime differently. (Stephen Cardie)

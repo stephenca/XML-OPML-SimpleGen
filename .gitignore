@@ -5,6 +5,7 @@
 Build
 blib/*
 _build/*
+.build/*
 MANIFEST.bak
 *.tar.gz
 *META.yml
