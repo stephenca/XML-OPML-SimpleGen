@@ -25,13 +25,14 @@ my %WriteMakefileArgs = (
   "NAME" => "XML::OPML::SimpleGen",
   "PREREQ_PM" => {
     "Class::Accessor" => 0,
+    "DateTime" => 0,
     "POSIX" => 0,
     "XML::Simple" => 0,
     "base" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.06",
+  "VERSION" => "0.07",
   "test" => {
     "TESTS" => "t/*.t"
   }

@@ -4,12 +4,15 @@ use strict;
 use warnings;
 
 use base 'Class::Accessor';
-use POSIX qw(strftime setlocale LC_TIME LC_CTYPE);
+
+use DateTime;
+
+use POSIX qw(setlocale LC_TIME LC_CTYPE);
 
 __PACKAGE__->mk_accessors(qw|groups xml_options outline group xml_head xml_outlines xml|);
 
 # Version set by dist.ini; do not change here.
-our $VERSION = '0.06'; # VERSION
+our $VERSION = '0.07'; # VERSION
 
 sub new {
     my $class = shift;
@@ -70,7 +73,13 @@ sub _date {
   my $type  = shift; # dateCreated or dateModified.
   my $ts_ar = shift; # e.g [ localtime() ]
 
-  return ( $type => strftime( "%a, %e %b %Y %H:%M:%S %z", @{$ts_ar} ) ); 
+  my %arg;
+  @arg{qw(second minute hour day month year)} = (
+      @{$ts_ar}[0..3],
+      $ts_ar->[4]+1,
+      $ts_ar->[5]+1900 );
+  my $dt = DateTime->new( %arg );
+  return ( $type => $dt->strftime('%a, %e %b %Y %H:%M:%S %z') );
 }
 
 sub id {
@@ -170,8 +179,8 @@ sub save {
 
 # ABSTRACT:  create OPML using XML::Simple
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -180,7 +189,7 @@ XML::OPML::SimpleGen - create OPML using XML::Simple
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
@@ -330,10 +339,9 @@ Marcus Theisen <marcus@thiesen.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Marcus Thiesen.
+This software is copyright (c) 2013 by Marcus Thiesen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

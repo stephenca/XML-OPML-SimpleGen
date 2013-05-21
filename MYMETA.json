@@ -25,6 +25,13 @@
       ]
    },
    "prereqs" : {
+      "build" : {
+         "requires" : {
+            "File::Find" : "0",
+            "File::Temp" : "0",
+            "Test::More" : "0"
+         }
+      },
       "configure" : {
          "requires" : {
             "ExtUtils::MakeMaker" : "6.30"
@@ -37,16 +44,8 @@
             "POSIX" : "0",
             "XML::Simple" : "0",
             "base" : "0",
-            "perl" : "5.006",
             "strict" : "0",
             "warnings" : "0"
-         }
-      },
-      "test" : {
-         "requires" : {
-            "File::Find" : "0",
-            "File::Temp" : "0",
-            "Test::More" : "0"
          }
       }
    },
@@ -59,10 +58,8 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "mailto" : "bug-xml-opml-simplegen at rt.cpan.org",
          "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=XML-OPML-SimpleGen"
       }
    },
    "version" : "0.07"
 }
-

@@ -1,7 +1,7 @@
 # This Makefile is for the XML::OPML::SimpleGen extension to perl.
 #
 # It was generated automatically by MakeMaker version
-# 6.56 (Revision: 65600) from the contents of
+# 6.6302 (Revision: 66302) from the contents of
 # Makefile.PL. Don't edit this file, edit Makefile.PL instead.
 #
 #       ANY CHANGES MADE HERE WILL BE LOST!
@@ -12,15 +12,15 @@
 #   MakeMaker Parameters:
 
 #     ABSTRACT => q[create OPML using XML::Simple]
-#     AUTHOR => q[Marcus Theisen <marcus@thiesen.org>]
+#     AUTHOR => [q[Marcus Theisen <marcus@thiesen.org>]]
 #     BUILD_REQUIRES => { Test::More=>q[0], File::Find=>q[0], File::Temp=>q[0] }
 #     CONFIGURE_REQUIRES => { ExtUtils::MakeMaker=>q[6.30] }
 #     DISTNAME => q[XML-OPML-SimpleGen]
 #     EXE_FILES => []
 #     LICENSE => q[perl]
 #     NAME => q[XML::OPML::SimpleGen]
-#     PREREQ_PM => { base=>q[0], warnings=>q[0], Class::Accessor=>q[0], XML::Simple=>q[0], strict=>q[0], Test::More=>q[0], POSIX=>q[0], File::Find=>q[0], File::Temp=>q[0] }
-#     VERSION => q[0.06]
+#     PREREQ_PM => { DateTime=>q[0], base=>q[0], warnings=>q[0], Class::Accessor=>q[0], XML::Simple=>q[0], strict=>q[0], Test::More=>q[0], File::Find=>q[0], POSIX=>q[0], File::Temp=>q[0] }
+#     VERSION => q[0.07]
 #     test => { TESTS=>q[t/*.t] }
 
 # --- MakeMaker post_initialize section:
@@ -28,7 +28,7 @@
 
 # --- MakeMaker const_config section:
 
-# These definitions are from config.sh (via /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/lib/5.12.2/i686-linux/Config.pm).
+# These definitions are from config.sh (via /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/lib/5.16.3/x86_64-linux/Config.pm).
 # They may have been overridden via Makefile.PL or on the command line.
 AR = ar
 CC = cc
@@ -41,14 +41,14 @@ FULL_AR = /usr/bin/ar
 LD = cc
 LDDLFLAGS = -shared -O2 -L/usr/local/lib -fstack-protector
 LDFLAGS =  -fstack-protector -L/usr/local/lib
-LIBC = /lib/libc-2.11.1.so
+LIBC = 
 LIB_EXT = .a
 OBJ_EXT = .o
 OSNAME = linux
-OSVERS = 2.6.32-25-generic
+OSVERS = 3.5.0-25-generic
 RANLIB = :
-SITELIBEXP = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/lib/site_perl/5.12.2
-SITEARCHEXP = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/lib/site_perl/5.12.2/i686-linux
+SITELIBEXP = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/lib/site_perl/5.16.3
+SITEARCHEXP = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/lib/site_perl/5.16.3/x86_64-linux
 SO = so
 VENDORARCHEXP = 
 VENDORLIBEXP = 
@@ -60,11 +60,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = XML::OPML::SimpleGen
 NAME_SYM = XML_OPML_SimpleGen
-VERSION = 0.06
+VERSION = 0.07
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_06
+VERSION_SYM = 0_07
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.06
+XS_VERSION = 0.07
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -78,55 +78,55 @@ MAN3EXT = 3
 INSTALLDIRS = site
 DESTDIR = 
 PREFIX = $(SITEPREFIX)
-PERLPREFIX = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2
-SITEPREFIX = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2
+PERLPREFIX = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0
+SITEPREFIX = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0
 VENDORPREFIX = 
-INSTALLPRIVLIB = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/lib/5.12.2
+INSTALLPRIVLIB = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/lib/5.16.3
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/lib/site_perl/5.12.2
+INSTALLSITELIB = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/lib/site_perl/5.16.3
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/lib/5.12.2/i686-linux
+INSTALLARCHLIB = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/lib/5.16.3/x86_64-linux
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/lib/site_perl/5.12.2/i686-linux
+INSTALLSITEARCH = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/lib/site_perl/5.16.3/x86_64-linux
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/bin
+INSTALLBIN = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/bin
+INSTALLSITEBIN = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
 INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/bin
+INSTALLSCRIPT = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/bin
+INSTALLSITESCRIPT = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
 INSTALLVENDORSCRIPT = 
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/man/man1
+INSTALLMAN1DIR = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/man/man1
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
-INSTALLSITEMAN1DIR = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/man/man1
+INSTALLSITEMAN1DIR = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/man/man1
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
 INSTALLVENDORMAN1DIR = 
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/man/man3
+INSTALLMAN3DIR = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/man/man3
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
-INSTALLSITEMAN3DIR = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/man/man3
+INSTALLSITEMAN3DIR = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/man/man3
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
 INSTALLVENDORMAN3DIR = 
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
-PERL_LIB = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/lib/5.12.2
-PERL_ARCHLIB = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/lib/5.12.2/i686-linux
+PERL_LIB = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/lib/5.16.3
+PERL_ARCHLIB = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/lib/5.16.3/x86_64-linux
 LIBPERL_A = libperl.a
 FIRST_MAKEFILE = Makefile
 MAKEFILE_OLD = Makefile.old
 MAKE_APERL_FILE = Makefile.aperl
 PERLMAINCC = $(CC)
-PERL_INC = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/lib/5.12.2/i686-linux/CORE
-PERL = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/bin/perl5.12.2
-FULLPERL = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/bin/perl5.12.2
+PERL_INC = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/lib/5.16.3/x86_64-linux/CORE
+PERL = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/bin/perl
+FULLPERL = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/bin/perl
 ABSPERL = $(PERL)
 PERLRUN = $(PERL)
 FULLPERLRUN = $(FULLPERL)
@@ -139,9 +139,9 @@ PERM_DIR = 755
 PERM_RW = 644
 PERM_RWX = 755
 
-MAKEMAKER   = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/lib/5.12.2/ExtUtils/MakeMaker.pm
-MM_VERSION  = 6.56
-MM_REVISION = 65600
+MAKEMAKER   = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/lib/5.16.3/ExtUtils/MakeMaker.pm
+MM_VERSION  = 6.6302
+MM_REVISION = 66302
 
 # FULLEXT = Pathname for extension directory (eg Foo/Bar/Oracle).
 # BASEEXT = Basename part of FULLEXT. May be just equal FULLEXT. (eg Oracle)
@@ -193,13 +193,13 @@ PM_TO_BLIB = lib/XML/OPML/SimpleGen.pm \
 
 
 # --- MakeMaker platform_constants section:
-MM_Unix_VERSION = 6.56
+MM_Unix_VERSION = 6.6302
 PERL_MALLOC_DEF = -DPERL_EXTMALLOC_DEF -Dmalloc=Perl_malloc -Dfree=Perl_mfree -Drealloc=Perl_realloc -Dcalloc=Perl_calloc
 
 
 # --- MakeMaker tool_autosplit section:
 # Usage: $(AUTOSPLITFILE) FileToSplit AutoDirToSplitInto
-AUTOSPLITFILE = $(ABSPERLRUN)  -e 'use AutoSplit;  autosplit($$ARGV[0], $$ARGV[1], 0, 1, 1)' --
+AUTOSPLITFILE = $(ABSPERLRUN)  -e 'use AutoSplit;  autosplit($$$$ARGV[0], $$$$ARGV[1], 0, 1, 1)' --
 
 
 
@@ -258,7 +258,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = XML-OPML-SimpleGen
-DISTVNAME = XML-OPML-SimpleGen-0.06
+DISTVNAME = XML-OPML-SimpleGen-0.07
 
 
 # --- MakeMaker macro section:
@@ -443,14 +443,15 @@ clean :: clean_subdirs
 	  *$(LIB_EXT) core \
 	  core.[0-9] $(INST_ARCHAUTODIR)/extralibs.all \
 	  core.[0-9][0-9] $(BASEEXT).bso \
-	  pm_to_blib.ts core.[0-9][0-9][0-9][0-9] \
+	  pm_to_blib.ts MYMETA.json \
+	  core.[0-9][0-9][0-9][0-9] MYMETA.yml \
 	  $(BASEEXT).x $(BOOTSTRAP) \
 	  perl$(EXE_EXT) tmon.out \
 	  *$(OBJ_EXT) pm_to_blib \
 	  $(INST_ARCHAUTODIR)/extralibs.ld blibdirs.ts \
 	  core.[0-9][0-9][0-9][0-9][0-9] *perl.core \
 	  core.*perl.*.? $(MAKE_APERL_FILE) \
-	  perl $(BASEEXT).def \
+	  $(BASEEXT).def perl \
 	  core.[0-9][0-9][0-9] mon.out \
 	  lib$(BASEEXT).def perlmain.c \
 	  perl.exe so_locations \
@@ -477,36 +478,88 @@ realclean purge ::  clean realclean_subdirs
 # --- MakeMaker metafile section:
 metafile : create_distdir
 	$(NOECHO) $(ECHO) Generating META.yml
-	$(NOECHO) $(ECHO) '--- #YAML:1.0' > META_new.yml
-	$(NOECHO) $(ECHO) 'name:               XML-OPML-SimpleGen' >> META_new.yml
-	$(NOECHO) $(ECHO) 'version:            0.06' >> META_new.yml
-	$(NOECHO) $(ECHO) 'abstract:           create OPML using XML::Simple' >> META_new.yml
+	$(NOECHO) $(ECHO) '---' > META_new.yml
+	$(NOECHO) $(ECHO) 'abstract: '\''create OPML using XML::Simple'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) 'author:' >> META_new.yml
-	$(NOECHO) $(ECHO) '    - Marcus Theisen <marcus@thiesen.org>' >> META_new.yml
-	$(NOECHO) $(ECHO) 'license:            perl' >> META_new.yml
-	$(NOECHO) $(ECHO) 'distribution_type:  module' >> META_new.yml
-	$(NOECHO) $(ECHO) 'configure_requires:' >> META_new.yml
-	$(NOECHO) $(ECHO) '    ExtUtils::MakeMaker:  6.30' >> META_new.yml
+	$(NOECHO) $(ECHO) '  - '\''Marcus Theisen <marcus@thiesen.org>'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) 'build_requires:' >> META_new.yml
-	$(NOECHO) $(ECHO) '    File::Find:  0' >> META_new.yml
-	$(NOECHO) $(ECHO) '    File::Temp:  0' >> META_new.yml
-	$(NOECHO) $(ECHO) '    Test::More:  0' >> META_new.yml
-	$(NOECHO) $(ECHO) 'requires:' >> META_new.yml
-	$(NOECHO) $(ECHO) '    base:             0' >> META_new.yml
-	$(NOECHO) $(ECHO) '    Class::Accessor:  0' >> META_new.yml
-	$(NOECHO) $(ECHO) '    POSIX:            0' >> META_new.yml
-	$(NOECHO) $(ECHO) '    strict:           0' >> META_new.yml
-	$(NOECHO) $(ECHO) '    warnings:         0' >> META_new.yml
-	$(NOECHO) $(ECHO) '    XML::Simple:      0' >> META_new.yml
-	$(NOECHO) $(ECHO) 'no_index:' >> META_new.yml
-	$(NOECHO) $(ECHO) '    directory:' >> META_new.yml
-	$(NOECHO) $(ECHO) '        - t' >> META_new.yml
-	$(NOECHO) $(ECHO) '        - inc' >> META_new.yml
-	$(NOECHO) $(ECHO) 'generated_by:       ExtUtils::MakeMaker version 6.56' >> META_new.yml
+	$(NOECHO) $(ECHO) '  File::Find: 0' >> META_new.yml
+	$(NOECHO) $(ECHO) '  File::Temp: 0' >> META_new.yml
+	$(NOECHO) $(ECHO) '  Test::More: 0' >> META_new.yml
+	$(NOECHO) $(ECHO) 'configure_requires:' >> META_new.yml
+	$(NOECHO) $(ECHO) '  ExtUtils::MakeMaker: 6.30' >> META_new.yml
+	$(NOECHO) $(ECHO) 'dynamic_config: 1' >> META_new.yml
+	$(NOECHO) $(ECHO) 'generated_by: '\''ExtUtils::MakeMaker version 6.6302, CPAN::Meta::Converter version 2.130880'\''' >> META_new.yml
+	$(NOECHO) $(ECHO) 'license: perl' >> META_new.yml
 	$(NOECHO) $(ECHO) 'meta-spec:' >> META_new.yml
-	$(NOECHO) $(ECHO) '    url:      http://module-build.sourceforge.net/META-spec-v1.4.html' >> META_new.yml
-	$(NOECHO) $(ECHO) '    version:  1.4' >> META_new.yml
+	$(NOECHO) $(ECHO) '  url: http://module-build.sourceforge.net/META-spec-v1.4.html' >> META_new.yml
+	$(NOECHO) $(ECHO) '  version: 1.4' >> META_new.yml
+	$(NOECHO) $(ECHO) 'name: XML-OPML-SimpleGen' >> META_new.yml
+	$(NOECHO) $(ECHO) 'no_index:' >> META_new.yml
+	$(NOECHO) $(ECHO) '  directory:' >> META_new.yml
+	$(NOECHO) $(ECHO) '    - t' >> META_new.yml
+	$(NOECHO) $(ECHO) '    - inc' >> META_new.yml
+	$(NOECHO) $(ECHO) 'requires:' >> META_new.yml
+	$(NOECHO) $(ECHO) '  Class::Accessor: 0' >> META_new.yml
+	$(NOECHO) $(ECHO) '  DateTime: 0' >> META_new.yml
+	$(NOECHO) $(ECHO) '  POSIX: 0' >> META_new.yml
+	$(NOECHO) $(ECHO) '  XML::Simple: 0' >> META_new.yml
+	$(NOECHO) $(ECHO) '  base: 0' >> META_new.yml
+	$(NOECHO) $(ECHO) '  strict: 0' >> META_new.yml
+	$(NOECHO) $(ECHO) '  warnings: 0' >> META_new.yml
+	$(NOECHO) $(ECHO) 'version: 0.07' >> META_new.yml
 	-$(NOECHO) $(MV) META_new.yml $(DISTVNAME)/META.yml
+	$(NOECHO) $(ECHO) Generating META.json
+	$(NOECHO) $(ECHO) '{' > META_new.json
+	$(NOECHO) $(ECHO) '   "abstract" : "create OPML using XML::Simple",' >> META_new.json
+	$(NOECHO) $(ECHO) '   "author" : [' >> META_new.json
+	$(NOECHO) $(ECHO) '      "Marcus Theisen <marcus@thiesen.org>"' >> META_new.json
+	$(NOECHO) $(ECHO) '   ],' >> META_new.json
+	$(NOECHO) $(ECHO) '   "dynamic_config" : 1,' >> META_new.json
+	$(NOECHO) $(ECHO) '   "generated_by" : "ExtUtils::MakeMaker version 6.6302, CPAN::Meta::Converter version 2.130880",' >> META_new.json
+	$(NOECHO) $(ECHO) '   "license" : [' >> META_new.json
+	$(NOECHO) $(ECHO) '      "perl_5"' >> META_new.json
+	$(NOECHO) $(ECHO) '   ],' >> META_new.json
+	$(NOECHO) $(ECHO) '   "meta-spec" : {' >> META_new.json
+	$(NOECHO) $(ECHO) '      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",' >> META_new.json
+	$(NOECHO) $(ECHO) '      "version" : "2"' >> META_new.json
+	$(NOECHO) $(ECHO) '   },' >> META_new.json
+	$(NOECHO) $(ECHO) '   "name" : "XML-OPML-SimpleGen",' >> META_new.json
+	$(NOECHO) $(ECHO) '   "no_index" : {' >> META_new.json
+	$(NOECHO) $(ECHO) '      "directory" : [' >> META_new.json
+	$(NOECHO) $(ECHO) '         "t",' >> META_new.json
+	$(NOECHO) $(ECHO) '         "inc"' >> META_new.json
+	$(NOECHO) $(ECHO) '      ]' >> META_new.json
+	$(NOECHO) $(ECHO) '   },' >> META_new.json
+	$(NOECHO) $(ECHO) '   "prereqs" : {' >> META_new.json
+	$(NOECHO) $(ECHO) '      "build" : {' >> META_new.json
+	$(NOECHO) $(ECHO) '         "requires" : {' >> META_new.json
+	$(NOECHO) $(ECHO) '            "File::Find" : "0",' >> META_new.json
+	$(NOECHO) $(ECHO) '            "File::Temp" : "0",' >> META_new.json
+	$(NOECHO) $(ECHO) '            "Test::More" : "0"' >> META_new.json
+	$(NOECHO) $(ECHO) '         }' >> META_new.json
+	$(NOECHO) $(ECHO) '      },' >> META_new.json
+	$(NOECHO) $(ECHO) '      "configure" : {' >> META_new.json
+	$(NOECHO) $(ECHO) '         "requires" : {' >> META_new.json
+	$(NOECHO) $(ECHO) '            "ExtUtils::MakeMaker" : "6.30"' >> META_new.json
+	$(NOECHO) $(ECHO) '         }' >> META_new.json
+	$(NOECHO) $(ECHO) '      },' >> META_new.json
+	$(NOECHO) $(ECHO) '      "runtime" : {' >> META_new.json
+	$(NOECHO) $(ECHO) '         "requires" : {' >> META_new.json
+	$(NOECHO) $(ECHO) '            "Class::Accessor" : "0",' >> META_new.json
+	$(NOECHO) $(ECHO) '            "DateTime" : "0",' >> META_new.json
+	$(NOECHO) $(ECHO) '            "POSIX" : "0",' >> META_new.json
+	$(NOECHO) $(ECHO) '            "XML::Simple" : "0",' >> META_new.json
+	$(NOECHO) $(ECHO) '            "base" : "0",' >> META_new.json
+	$(NOECHO) $(ECHO) '            "strict" : "0",' >> META_new.json
+	$(NOECHO) $(ECHO) '            "warnings" : "0"' >> META_new.json
+	$(NOECHO) $(ECHO) '         }' >> META_new.json
+	$(NOECHO) $(ECHO) '      }' >> META_new.json
+	$(NOECHO) $(ECHO) '   },' >> META_new.json
+	$(NOECHO) $(ECHO) '   "release_status" : "stable",' >> META_new.json
+	$(NOECHO) $(ECHO) '   "version" : "0.07"' >> META_new.json
+	$(NOECHO) $(ECHO) '}' >> META_new.json
+	-$(NOECHO) $(MV) META_new.json $(DISTVNAME)/META.json
 
 
 # --- MakeMaker signature section:
@@ -598,15 +651,19 @@ ci :
 
 # --- MakeMaker distmeta section:
 distmeta : create_distdir metafile
-	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'eval { maniadd({q{META.yml} => q{Module meta-data (added by MakeMaker)}}) } ' \
-	  -e '    or print "Could not add META.yml to MANIFEST: $${'\''@'\''}\n"' --
+	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'exit unless -e q{META.yml};' \
+	  -e 'eval { maniadd({q{META.yml} => q{Module YAML meta-data (added by MakeMaker)}}) }' \
+	  -e '    or print "Could not add META.yml to MANIFEST: $$$${'\''@'\''}\n"' --
+	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'exit unless -f q{META.json};' \
+	  -e 'eval { maniadd({q{META.json} => q{Module JSON meta-data (added by MakeMaker)}}) }' \
+	  -e '    or print "Could not add META.json to MANIFEST: $$$${'\''@'\''}\n"' --
 
 
 
 # --- MakeMaker distsignature section:
 distsignature : create_distdir
 	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'eval { maniadd({q{SIGNATURE} => q{Public-key signature (added by MakeMaker)}}) } ' \
-	  -e '    or print "Could not add SIGNATURE to MANIFEST: $${'\''@'\''}\n"' --
+	  -e '    or print "Could not add SIGNATURE to MANIFEST: $$$${'\''@'\''}\n"' --
 	$(NOECHO) cd $(DISTVNAME) && $(TOUCH) SIGNATURE
 	cd $(DISTVNAME) && cpansign -s
 
@@ -752,7 +809,7 @@ $(FIRST_MAKEFILE) : Makefile.PL $(CONFIGDEP)
 
 # --- MakeMaker makeaperl section ---
 MAP_TARGET    = perl
-FULLPERL      = /home/stephenc/perl5/perlbrew/perls/perl-5.12.2/bin/perl5.12.2
+FULLPERL      = /home/stephenc/perl5/perlbrew/perls/perl-5.16.0/bin/perl
 
 $(MAP_TARGET) :: static $(MAKE_APERL_FILE)
 	$(MAKE) $(USEMAKEFILE) $(MAKE_APERL_FILE) $@
@@ -796,17 +853,18 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.06">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="$(VERSION)">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>create OPML using XML::Simple</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>Marcus Theisen &lt;marcus@thiesen.org&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Class::Accessor" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="DateTime::" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="POSIX::" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="XML::Simple" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="base::" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="strict::" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="warnings::" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="i686-linux-5.12" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="x86_64-linux-5.16" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    </IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '</SOFTPKG>' >> $(DISTNAME).ppd
